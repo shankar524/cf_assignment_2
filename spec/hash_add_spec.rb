@@ -18,6 +18,5 @@ describe HashAdd do
     it 'should return nil when non-numeric valued hash is passed' do
       expect(subject.add(invalid_input)).to be(nil)
     end
-
   end
 end

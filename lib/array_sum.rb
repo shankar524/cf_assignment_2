@@ -1,10 +1,8 @@
 class NumberArraySum
   def print_arr_sum(arr)
-    return arr.nil? nil
     begin
-      return nil if arr.length==0
-      return arr.sum
-    rescue 
+      arr.nil? || arr.empty? ? nil : arr.reduce(0, :+)
+    rescue
       nil
     end
   end
