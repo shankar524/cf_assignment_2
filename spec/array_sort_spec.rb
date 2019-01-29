@@ -1,7 +1,6 @@
 require 'array_sort'
 
 describe ArraySort do 
-  
   describe '.sort' do
 
     subject {ArraySort.new.sort(input)}
