@@ -1,26 +1,39 @@
 require 'array_sum'
 
 describe NumberArraySum do 
-   subject { NumberArraySum.new } 
 
-   describe ".print_arr_sum" do
-      let(:number_arr){[1,2,3]}
-   
-      it "should return sum(6) when Number array [1,2,3] is passed" do
-         expect(subject.print_arr_sum(number_arr)).to be(6)
+   describe '.print_arr_sum' do
+      subject { NumberArraySum.new.print_arr_sum(input_array) }
+      let(:input_array){[1,2,3]}
+      
+
+      context 'when number array i.e [1,2,3] is passed' do
+         let(:result){6}
+         it 'should return sum(6)' do
+            expect(subject).to be(result)
+         end
       end
 
-      it 'should return nil when empty array is passed' do
-         expect(subject.print_arr_sum([])).to be(nil)
+      context 'when empty array is passed' do
+         let(:input_array){[]}
+         it 'should return nil' do
+            expect(subject).to be(nil)
+         end
       end
-
-     it 'should return nil when nil is passed' do
-         expect(subject.print_arr_sum(nil)).to be(nil)
-     end
      
-     it 'should return nil when any of the array item is not number' do
-      expect(subject.print_arr_sum([1,2,3,'a'])).to be(nil)
-     end
+      context 'when nil is passed' do
+         let(:input_array){nil}
+         it 'should return nil' do
+            expect(subject).to be(nil)
+        end
+      end
+
+      context 'when number array consist of non numeric value' do
+      let(:input_array){[1, 2, 3, 'a']}
+         it 'should return nil' do
+            expect(subject).to be(nil)
+         end
+      end
    end
 end
 
