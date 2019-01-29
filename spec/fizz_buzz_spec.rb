@@ -4,7 +4,7 @@ describe FizzBuzzProblem do
   describe '.is_divisible_by' do
     subject{FizzBuzzProblem.new.is_divisible_by(divident,divisor)}
     let(:divisor) {}
-      let(:divident) {}
+    let(:divident) {}
 
     context 'when divisor exactly divides divident' do
       let(:divisor) {5}
@@ -12,6 +12,7 @@ describe FizzBuzzProblem do
       it 'should return true' do
         expect(subject).to eq(true)
       end
+
     end
 
     context 'when divisor does not exactly divides divident' do
@@ -69,6 +70,7 @@ describe FizzBuzzProblem do
 
     context 'when multiple of 5 is not provided' do
       let(:input) {47}
+      
       it 'should return false' do
         expect(subject).to eq(false)
       end

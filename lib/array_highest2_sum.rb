@@ -1,10 +1,8 @@
 class ArrayHighest2Sum
 
 def calculate(arr)
-  highest =get_highest_value(arr)
-  arr.delete(highest)
-  second_highest =get_highest_value(arr)
-  highest+second_highest
+  arr.sort!
+  arr[arr.length-1]+arr[arr.length-2]
 end#calculate method ends here
 
 def get_highest_value(arr)
