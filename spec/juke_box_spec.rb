@@ -5,7 +5,7 @@ describe JukeBox do
 
     describe '.play' do
         subject {JukeBox.new(songs).play}
-        it 'should return play song' do
+        it 'should return current song' do
             expect(subject).to eq('song1.mp3')
         end 
     end
