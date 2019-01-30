@@ -24,7 +24,7 @@ class FetchMovie
     fetch_movies_data
 
     #write to file each movie data
-    @movies_data.each { |person| file.puts(person.values.join(COMMA)) }
+    @movies_data.each { |movie| file.puts(movie.values.join(COMMA)) }
 
     #close file after reading
     file.close
